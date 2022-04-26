@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  /* background-color: #24252a; */
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  z-index: 2;
+  background-color: rgba(80, 120, 100, 230);
+}
+
+.logo {
+  cursor: pointer;
+  width: 200px;
+}
+.navigation {
+  justify-content: flex-end;
+  /* width: 65vw; */
+  width: 100%;
+  display: flex;
+}
+.navLinks {
+  list-style: none;
+}
+.navLinks li {
+  display: inline-flex;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.navLinks li a {
+  transition: all 0.5s ease 0.3s;
+}
+
+.navLinks li a:hover {
+  color: rgba(93, 125, 112, 255);
+}
+
+.accBtn {
+  padding: 9px 25px;
+  background-color: rgba(93, 125, 112, 255);
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+  /* transition: all 0.3s; */
+  cursor: pointer;
+}
+.accBtn:hover {
+  background-color: rgba(93, 125, 112, 265);
+  transition: all 0.4s;
+}
+
+#backgroundVideo {
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+  filter: brightness(0.4);
+}
+
+.mainSlider {
+  position: relative;
+}
+
+.mainBtn {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  width: 600px;
+  height: 100px;
+  padding: 10px 15px;
+  transform: translate(-50%, -50%);
+  filter: brightness(0.5);
+  color: whitesmoke;
+  background-color: rgba(93, 125, 112, 255);
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-weight: 400;
+}
+.mainBtn:hover {
+  width: 603px;
+  height: 103px;
+}
+
+aside {
+  background-color: brown;
+  display: flex;
+  position: absolute;
+  top: 30%;
+  justify-content: flex-end;
+  left: 50%;
+  right: 20%;
+  border-radius: 50px;
+  justify-items: center;
+  height: 200px;
+  background-color: #24252a;
+  opacity: 0.6;
+}
+
+.asideText {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10;
+  font-weight: 400;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  background-color: rgba(80, 120, 100, 230);
+  margin-top: 10px;
+}
+
+.box-footer {
+  width: 250px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.box-footer ul li {
+  list-style: square;
+}
+
+.footer-row {
+  width: 100%;
+}
