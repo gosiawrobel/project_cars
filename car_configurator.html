@@ -16,9 +16,37 @@
   <body>
     <header id="mainNav"></header>
     <h1>Form</h1>
+
+    <form>
+      <section id="basic-data">
+        <p>Complete the form to get your dream car</p>
+        <span>First name: </span><input type="name" id="form-name" />
+        <span>Last name: </span><input type="name" id="form-name" />
+      </section>
+      <section id="data-picker">
+        <p>
+          Select when do you want get your car. Our company offers delivery of
+          the car 14 days after the date of purchase
+        </p>
+        <input type="date" />
+      </section>
+      <section id="payment">
+        <p>Please select your payment method:</p>
+
+        <input id="form-leasing" type="radio" name="form" value="leasing" />
+        <label for="form-leasing">Leasing</label>
+      </section>
+      <section id="payment">
+        <input id="form-cash" type="radio" name="form" value="cash" />
+        <label fro="from-cash">Cash</label>
+      </section>
+    </form>
+
     <footer id="footer"></footer>
   </body>
   <script src="scripts/navigation.js"></script>
   <script src="scripts.index.js"></script>
   <script src="scripts/footer.js"></script>
 </html>
+
+ 
