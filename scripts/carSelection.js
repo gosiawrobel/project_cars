@@ -2,8 +2,8 @@ import { cars } from "./carsDB.js";
 
 let $carSelection = document.querySelector("#car-selection");
 
-function carContainerGenHTML(car) {
-  return ` <div class="col-12 col-md-6 col-lg-4 car-container border"><a class="car-hyperlink" href="car_configurator.html?make=${car.make}&model=${car.model}&img=${car.img}&year=${car.year}&engine=${car.engine}&power=${car.power}&mileage=${car.mileage}">
+function carContainerGenHTML(car, id) {
+  return ` <div id="car${id}" class="col-12 col-md-6 col-lg-4 car-container border car-hyperlink">
   <img
     class="foto-car"
     src=${car.img}
@@ -15,17 +15,28 @@ function carContainerGenHTML(car) {
   <p>Engine: ${car.engine}</p>
   <p>Power: ${car.power} KM</p>
   <p>Mileage: ${car.mileage} km</p>
-  </a>
 </div>`;
 }
 
 function carsGenHTML(cars) {
   let carsHTML = ``;
-  for (let car of cars) {
-    carsHTML += carContainerGenHTML(car);
+  for (let i = 0; i < cars.length; i++) {
+    carsHTML += carContainerGenHTML(cars[i], i);
   }
 
   return `<div class="row justify-content-center">${carsHTML}</div>`;
 }
 
+function carsAddListeners(cars) {
+  for (let i = 0; i < cars.length; i++) {
+    let $car = document.querySelector(`#car${i}`);
+    $car.addEventListener("click", () => {
+      localStorage.setItem("selectedCarId", i);
+      document.location.href = "car_configurator.html";
+    });
+  }
+}
+
 $carSelection.innerHTML = carsGenHTML(cars);
+
+carsAddListeners(cars);
