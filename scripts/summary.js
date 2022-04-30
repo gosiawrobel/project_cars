@@ -12,7 +12,7 @@ $summaryInfo.innerHTML = `<img class="finallPhoto" src="${
 <p>
 Price: ${totalPrice} USD (including accessories).${
   localStorage.getItem(`leasing`) == `true`
-    ? `Leasing ${Math.round(totalPrice / 36)} USD paid monthly for 3 years`
+    ? ` Leasing ${Math.round(totalPrice / 36)} USD paid monthly for 3 years.`
     : `Paid in cash.`
 }</p>
 <p>Your car will be delivered on ${dayOfDelivery.getDate()}/${dayOfDelivery.getMonth()}/${dayOfDelivery.getFullYear()}</p>

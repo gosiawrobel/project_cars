@@ -19,5 +19,46 @@
 }
 
 @media only screen and (max-width: 768px){
+  .congratulationTitle {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .finallPhoto {
+    display:block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 95%;
+  }
   
+  .finallInfo {
+    display: block;
+    font-size: 20px;
+    width: 80%;
+    padding-left: 20px;
+    top: 15%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 834px) and (orientation:portrait){
+  .congratulationTitle {
+    padding-top: 20px;
+    padding-left: 30px;
+  }
+  .finallPhoto {
+    display: block;
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 95%;
+  }
+  
+  .finallInfo {
+    display: block;
+    font-size: 25px;
+    width: 95%;
+    padding-left: 20px;
+    top: 15%;
+  }
 }
