@@ -115,34 +115,6 @@ header {
   color: whitesmoke;
 }
 
-aside {
-  background-color: brown;
-  display: flex;
-  position: absolute;
-  top: 30%;
-  justify-content: flex-end;
-  left: 50%;
-  right: 20%;
-  border-radius: 50px;
-  justify-items: center;
-  height: 200px;
-  background-color: #24252a;
-  opacity: 0.6;
-}
-
-.asideText {
-  display: flex;
-  justify-content: center;
-  color: whitesmoke;
-  text-align: center;
-  padding-top: 20px;
-  padding-right: 10px;
-  padding-left: 10;
-  font-weight: 400;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-
 footer {
   background-color: rgba(80, 120, 100, 230);
   /* margin-top: 10px; */

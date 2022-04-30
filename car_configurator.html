@@ -21,7 +21,7 @@
     <section class="carAccessories"></section>
     <h1>Form</h1>
 
-    <form class="row g-4">
+    <form class="row carForm">
       <section class="col-6">
         <input
           id="fullNameInput"
@@ -72,27 +72,25 @@
       </section>
       <section>
         <p>Please select day of delivery:</p>
-        <select name="date" id="dateSelector">
-        
-        </select>
+        <select name="date" id="dateSelector"></select>
       </section>
-  
+
+      <section id="payment">
+        <p>Please select your payment method:</p>
+
+        <input
+          id="formLeasing"
+          type="radio"
+          name="paymentMethod"
+          value="leasing"
+        />
+        <label for="form-leasing">Leasing</label>
+
+        <input id="formCash" type="radio" name="paymentMethod" value="cash" />
+        <label for="from-cash">Cash</label>
+      </section>
     </form>
 
-    <section id="payment">
-      <p>Please select your payment method:</p>
-
-      <input
-        id="formLeasing"
-        type="radio"
-        name="paymentMethod"
-        value="leasing"
-      />
-      <label for="form-leasing">Leasing</label>
-
-      <input id="formCash" type="radio" name="paymentMethod" value="cash" />
-      <label for="from-cash">Cash</label>
-    </section>
     <section class="summaryPrice">
       <section id="totalPrice"></section>
       <button id="buyBtn" class="accBtn buyBtn">Buy</button>

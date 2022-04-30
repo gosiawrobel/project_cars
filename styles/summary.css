@@ -1,0 +1,19 @@
+.congratulationTitle {
+  padding-top: 40px;
+  padding-left: 30px;
+}
+.finallPhoto {
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+  width: 40%;
+}
+
+.finallInfo {
+  display: inline-block;
+  font-size: 25px;
+  width: 40%;
+  padding-left: 20px;
+  top: 15%;
+}

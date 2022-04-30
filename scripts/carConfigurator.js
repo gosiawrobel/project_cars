@@ -62,13 +62,16 @@ function updatePrice() {
       totalPrice += accessories[i].price;
     }
   }
-  $totalPrice.innerHTML = `Price: ${totalPrice} USD`;
+  if (localStorage.getItem(`leasing`) == `true`) {
+    $totalPrice.innerHTML = `Price ${Math.round(totalPrice / 36)} USD monthly for 3 years`;
+  } else {
+    $totalPrice.innerHTML = `Price: ${totalPrice} USD`;
+  }
   localStorage.setItem(`totalPrice`, totalPrice);
 }
 
 function carAccessoryAddListeners(accessories) {
   for (let i = 0; i < accessories.length; i++) {
-    // function recalculatedPrice(price) {}
 
     let $carAccessory = document.querySelector(`
     #accessory${i}`);
@@ -93,8 +96,6 @@ $choosenCar.innerHTML = carGenHTML(cars[localStorage.getItem("selectedCarId")]);
 $accessories.innerHTML = accessoriesGenHTML(accessories);
 carAccessoryAddListeners(accessories);
 
-$buyBtn.addEventListener("click", () => {});
-
 $fullNameInput.addEventListener("change", () => {
   let re = /^[A-Z][a-z]*\s[A-Z][a-z]*$/m;
   if (re.test($fullNameInput.value)) {
@@ -106,6 +107,7 @@ $fullNameInput.addEventListener("change", () => {
     $fullNameValid.innerHTML = "Please enter full name";
     $fullNameInput.classList.remove(`correct`);
     $fullNameInput.classList.add(`incorrect`);
+    localStorage.removeItem(`fullName`);
   }
 });
 $fullNameInput.value = localStorage.getItem(`fullName`);
@@ -121,6 +123,7 @@ $phoneNumberInput.addEventListener("change", () => {
     $phoneNumberValid.innerHTML = "Please enter phone number eg. 777 777 777";
     $phoneNumberInput.classList.remove(`correct`);
     $phoneNumberInput.classList.add(`incorrect`);
+    localStorage.removeItem(`phoneNumber`);
   }
 });
 $phoneNumberInput.value = localStorage.getItem(`phoneNumber`);
@@ -136,6 +139,7 @@ $addressInput.addEventListener("change", () => {
     $addressValid.innerHTML = "Enter street house number opt./flat number ";
     $addressInput.classList.remove(`correct`);
     $addressInput.classList.add(`incorrect`);
+    localStorage.removeItem(`address`);
   }
 });
 $addressInput.value = localStorage.getItem(`address`);
@@ -151,6 +155,7 @@ $cityInput.addEventListener("change", () => {
     $cityValid.innerHTML = "Enter city name";
     $cityInput.classList.remove(`correct`);
     $cityInput.classList.add(`incorrect`);
+    localStorage.removeItem(`city`);
   }
 });
 $cityInput.value = localStorage.getItem(`city`);
@@ -166,6 +171,7 @@ $zipInput.addEventListener("change", () => {
     $zipValid.innerHTML = "Enter valid zip code eg. 00-000";
     $zipInput.classList.remove(`correct`);
     $zipInput.classList.add(`incorrect`);
+    localStorage.removeItem(`zip`);
   }
 });
 $zipInput.value = localStorage.getItem(`zip`);
@@ -205,11 +211,29 @@ $dateSelector.addEventListener("change", () => {
 
 $formLeasing.addEventListener("change", () => {
   localStorage.setItem(`leasing`, true);
+  updatePrice();
 });
 
 $formCash.addEventListener("change", () => {
   localStorage.setItem(`leasing`, false);
+  updatePrice();
 });
 
 $formCash.checked = localStorage.getItem(`leasing`) != `true`;
 $formLeasing.checked = localStorage.getItem(`leasing`) == `true`;
+
+$buyBtn.addEventListener("click", () => {
+  if (
+    localStorage.getItem(`fullName`) != null &&
+    localStorage.getItem(`phoneNumber`) != null &&
+    localStorage.getItem(`address`) != null &&
+    localStorage.getItem(`city`) != null &&
+    localStorage.getItem(`zip`) != null &&
+    localStorage.getItem(`dayOfDelivery`) != null &&
+    localStorage.getItem(`leasing`) != null
+  ) {
+    window.location.href = "summary.html";
+  } else {
+    alert(`You missed some information`);
+  }
+});
