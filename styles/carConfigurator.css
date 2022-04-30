@@ -87,8 +87,9 @@ h3 {
 
 @media only screen and (max-width: 768px) {
   .configPhoto {
-    width: 90%;
-    margin: 10px;
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   
   .description {

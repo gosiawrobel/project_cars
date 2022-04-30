@@ -63,7 +63,9 @@ function updatePrice() {
     }
   }
   if (localStorage.getItem(`leasing`) == `true`) {
-    $totalPrice.innerHTML = `Price ${Math.round(totalPrice / 36)} USD monthly for 3 years`;
+    $totalPrice.innerHTML = `Price ${Math.round(
+      totalPrice / 36
+    )} USD monthly for 3 years`;
   } else {
     $totalPrice.innerHTML = `Price: ${totalPrice} USD`;
   }
@@ -72,7 +74,6 @@ function updatePrice() {
 
 function carAccessoryAddListeners(accessories) {
   for (let i = 0; i < accessories.length; i++) {
-
     let $carAccessory = document.querySelector(`
     #accessory${i}`);
     $carAccessory.addEventListener("click", () => {
@@ -218,6 +219,10 @@ $formCash.addEventListener("change", () => {
   localStorage.setItem(`leasing`, false);
   updatePrice();
 });
+
+if (!localStorage.getItem(`leasing`)) {
+  localStorage.setItem(`leasing`, true);
+}
 
 $formCash.checked = localStorage.getItem(`leasing`) != `true`;
 $formLeasing.checked = localStorage.getItem(`leasing`) == `true`;
