@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  /* background-color: #24252a; */
 }
 
 li,
@@ -15,6 +14,7 @@ button {
   font-size: 16px;
   color: #edf0f1;
   text-decoration: none;
+  font-weight: bolder;
 }
 
 header {
@@ -24,6 +24,7 @@ header {
   padding: 20px 10px;
   z-index: 2;
   background-color: rgba(80, 120, 100, 230);
+  /* background-color: #bad4aa; */
 }
 
 .logo {
@@ -32,9 +33,9 @@ header {
 }
 .navigation {
   justify-content: flex-end;
-  /* width: 65vw; */
   width: 100%;
   display: flex;
+  height: auto;
 }
 .navLinks {
   list-style: none;
@@ -46,17 +47,17 @@ header {
   padding-left: 10px;
 }
 
-.navLinks li a {
-  transition: all 0.5s ease 0.3s;
-}
-
 .navLinks li a:hover {
-  color: rgba(93, 125, 112, 255);
+  color: #edb458;
+  font-weight: bolder;
+  /* color: rgba(93, 125, 112, 255); */
 }
 
 .accBtn {
   padding: 9px 25px;
-  background-color: rgba(93, 125, 112, 255);
+  /* background-color: #536271; */
+  background-color: rgba(93, 125, 112, 265);
+
   border: none;
   border-radius: 50px;
   transition: all 0.3s ease 0s;
@@ -64,15 +65,16 @@ header {
   cursor: pointer;
 }
 .accBtn:hover {
-  background-color: rgba(93, 125, 112, 265);
+  background-color: #edb458;
+  /* background-color: rgba(93, 125, 112, 265); */
   transition: all 0.4s;
 }
 
-#backgroundVideo {
+#mainCar {
   width: 100%;
   object-fit: cover;
   height: 100vh;
-  filter: brightness(0.4);
+  filter: brightness(0.7);
 }
 
 .mainSlider {
@@ -81,23 +83,36 @@ header {
 
 .mainBtn {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 25%;
   width: 600px;
   height: 100px;
   padding: 10px 15px;
   transform: translate(-50%, -50%);
-  filter: brightness(0.5);
+  filter: brightness(0.8);
   color: whitesmoke;
   background-color: rgba(93, 125, 112, 255);
   border-radius: 50px;
   cursor: pointer;
   border: none;
   font-weight: 400;
+  font-weight: bold;
+  z-index: 5;
 }
 .mainBtn:hover {
   width: 603px;
   height: 103px;
+  background-color: #edb458;
+}
+
+.mainHeader {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 40%;
+  word-wrap: normal;
+  font-weight: bold;
+  color: whitesmoke;
 }
 
 aside {
@@ -130,7 +145,7 @@ aside {
 
 footer {
   background-color: rgba(80, 120, 100, 230);
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .box-footer {

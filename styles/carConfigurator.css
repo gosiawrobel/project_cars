@@ -1,0 +1,79 @@
+.configPhoto {
+  width: 700px;
+
+  margin: 40px 30px 30px 70px;
+}
+
+.description {
+  padding-top: 30px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+h3 {
+  padding-top: 20px;
+  margin-left: 30px;
+  justify-self: center;
+  color: #edb458;
+  font-weight: bolder;
+}
+
+.descriptionInfo {
+  width: 100%;
+}
+
+.buyBtn {
+  width: 150px;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.accessoryBox {
+  width: 270px;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 10px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.accessoryBox:hover {
+  cursor: pointer;
+}
+
+.carAccessories {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.selectedBox {
+  border: 1px solid #edb458 !important;
+}
+
+#totalPrice {
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-left: 34px;
+}
+
+.correct {
+  border: 1px solid green;
+  background-color: #add9b3 !important;
+  box-shadow: none;
+  outline: none;
+}
+
+.incorrect {
+  border: 1px solid red;
+  background-color: #daaeae;
+  box-shadow: none;
+  outline: none;
+}
+
+#dateSelector {
+  width: 300px;
+  border: 1px solid #edb458;
+}

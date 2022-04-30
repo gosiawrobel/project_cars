@@ -25,9 +25,11 @@
 
 .car-hyperlink:hover {
   font-weight: bold;
-  color: darkslategray;
+  /* color: darkslategray; */
+  color: #edb458;
 }
 
 #car-selection {
   padding-bottom: 30px;
 }
+

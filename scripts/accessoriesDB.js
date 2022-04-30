@@ -1,7 +1,7 @@
-const accessories = [
+export const accessories = [
   {
     name: `Set of tires`,
-    quantity: 4,
+    quantity: 1,
     price: 150,
     id: 99356,
   },
@@ -13,7 +13,7 @@ const accessories = [
   },
   { name: `Trunk mat`, quantity: 1, price: 60, id: 99687 },
   {
-    name:`Armrest`,
+    name: `Armrest`,
     quantity: 1,
     price: 200,
     id: 99825,
@@ -29,42 +29,5 @@ const accessories = [
     quantity: 2,
     price: 350,
     id: 99273,
-
   },
-  {
-    name: `Body color`,
-    variants: {
-      color: `Black`,
-      price: 0,
-      id: 87362,
-    },
-    variants: {
-      color: `Lightgray`,
-      price: 250,
-      id: 86523,
-    },
-    variants: {
-      color: `Red fusion`,
-      price: 300,
-      id: 87624,
-    }, 
-    variants: `Orange sun`,
-    price: 300,
-    id: 87243,
-  },
-  {
-    name: `Engine`,
-    variants:{
-      engine: `Diesel`,
-      id: 55426,
-    },
-    variants: {
-      engine: `Petrol + LPG`,
-      id: 55263,
-    },
-    variants: {
-      engine: `Petrol`,
-      id: 55236,
-    }
-  }
 ];
